@@ -8,10 +8,10 @@ layout: default
 <div class="header-container bg-primary jumbotron">
     <div class="container">
         <div class="intro" role="navigation" aria-label="Main">
-            <h1>Language Server Protocol</h1>
+            <h1>语言服务器协议</h1>
         </div>
         <p class="intro-text">
-            The Language Server Protocol (LSP) defines the protocol used between an editor or IDE and a language server that provides language features like auto complete, go to definition, find all references etc. The goal of the Language Server Index Format (LSIF, pronounced like "else if") is to support rich code navigation in development tools or a Web UI without needing a local copy of the source code.
+            语言服务器协议(LSP)定义了编辑器或IDE和语言服务器之间使用的协议，后者提供了自动完成、转到定义、查找所有引用等语言功能。语言服务器索引格式(LSIF，发音类似于"else if")的目标是在开发工具或Web UI中支持丰富的代码导航，而不需要源代码的本地副本。
         </p>
 
         <br />
@@ -25,12 +25,12 @@ layout: default
 <div class="container">
     <div class="row align-items-center">
         <div class="col-lg-7">
-            <h2 class="header-light regular-pad">What is the Language Server Protocol?</h2>
+            <h2 class="header-light regular-pad">什么是语言服务器协议?</h2>
 
-            <p>Adding features like auto complete, go to definition, or documentation on hover for a programming language takes significant effort. Traditionally this work had to be repeated for each development tool, as each tool provides different APIs for implementing the same feature.</p>
-            <p>A <i>Language Server</i> is meant to provide the language-specific smarts and communicate with development tools over a protocol that enables inter-process communication.</p>
-            <p>The idea behind the <i>Language Server Protocol (LSP)</i> is to standardize the protocol for how such servers and development tools communicate. This way, a single <i>Language Server</i> can be re-used in multiple development tools, which in turn can support multiple languages with minimal effort.</p>
-            <p>LSP is a win for both language providers and tooling vendors!</p>
+            <p>为编程语言添加自动完成、转到定义或悬停文档等功能需要大量的工作。传统上，这种工作必须对每个开发工具重复进行，因为每个工具为实现相同的特性提供了不同的api。</p>
+            <p>一个 <i>语言服务器</i> 旨在提供特定于语言的智能，并通过支持进程间通信的协议与开发工具进行通信。</p>
+            <p><i>语言服务器协议(LSP)</i> 背后的思想是标准化这种服务器和开发工具通信的协议。通过这种方式，单个 <i>语言服务器</i> 可以在多个开发工具中重用，而这些开发工具又可以以最小的工作量支持多种语言。</p>
+            <p>对于语言供应商和工具供应商来说，LSP都是一个胜利!</p>
         </div>
         <div class="col-lg-5">
             <div id="carouselOne" class="carousel slide" data-ride="carousel">
@@ -39,7 +39,7 @@ layout: default
                         <div class="row align-items-center">
                             <div class="col-lg-12">
                                 <img alt="VS Code CSS code completion" src="img/vscode-css-code-complete.png" class="img-fluid rounded"/>
-                                <p class="text-left"><i>CSS code complete in VS Code powered by the CSS LSP Server</i></p>
+                                <p class="text-left"><i>在 VS code 中 CSS 代码完成由 CSS LSP 服务器</i></p>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ layout: default
                         <div class="row align-items-center">
                             <div class="col-lg-12">
                                 <img alt="Atom CSS code completion" src="img/atom-css-code-complete.png" class="img-fluid rounded"/>
-                                <p class="text-left"><i>CSS code complete in Atom powered by the CSS LSP Server</i></p>
+                                <p class="text-left"><i>在 Atom 中 CSS 代码完成由 CSS LSP 服务器提供</i></p>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ layout: default
                         <div class="row align-items-center">
                             <div class="col-lg-12">
                                 <img alt="Eclipse CSS code completion" src="img/eclipse-css-code-complete.png" class="img-fluid rounded"/>
-                                <p class="text-left"><i>CSS code complete in Eclipse IDE powered by the CSS LSP Server</i></p>
+                                <p class="text-left"><i>在 Eclipse IDE 中 CSS 代码完成由 CSS LSP 服务器提供</i></p>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ layout: default
                         <div class="row align-items-center">
                             <div class="col-lg-12">
                                 <img alt="VS Code PowerShell hover" src="img/vscode-ps-hover.png" class="img-fluid rounded"/>
-                                <p class="text-left"><i>PowerShell Hover in VS Code powered by the PowerShell LSP Server</i></p>
+                                <p class="text-left"><i>在 VS code 中 PowerShell 悬停提示由 PowerShell LSP 服务器提供</i></p>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ layout: default
                         <div class="row align-items-center">
                             <div class="col-lg-8">
                                 <img alt="VS IDE Rust code completion" src="img/vs-rust-code-complete.png" class="img-fluid rounded"/>
-                                <p class="text-left"><i>Rust code complete in Visual Studio powered by the Rust LSP Server</i></p>
+                                <p class="text-left"><i>在 Visual Studio 中 Rust 代码完成由 Rust LSP 服务器提供</i></p>
                             </div>
                         </div>
                     </div>
@@ -85,24 +85,24 @@ layout: default
     <div class="row more-info">
         <div class="col-lg-4">
             <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>
-            <a href='{{ "/overviews/lsp/overview" | prepend: site.baseurl }}'><h3 class="text-center">Overview</h3></a>
+            <a href='{{ "/overviews/lsp/overview" | prepend: site.baseurl }}'><h3 class="text-center">概述</h3></a>
             <p>
-                The protocol defines the format of the messages sent using JSON-RPC between the development tool and the language server. LSIF defines a graph format to store information about programming artifacts.
+                该协议定义了在开发工具和语言服务器之间使用JSON-RPC发送消息的格式。LSIF定义了一种图形格式来存储关于编程工件的信息。
             </p>
         </div>
         <div class="col-lg-4">
             <h1 class="text-center"><i class="fas fa-book" aria-hidden="true"></i></h1>
-            <a href='{{ "/specifications/specification-current" | prepend: site.baseurl }}'><h3 class="text-center">Specification</h3></a>
+            <a href='{{ "/specifications/specification-current" | prepend: site.baseurl }}'><h3 class="text-center">规范</h3></a>
             <p>
-                The latest version of the LSP specification is version 3.16. There is now also a specification for the upcoming language server index format (LSIF).
+                LSP规格最新版本为3.16。现在还有一个关于即将到来的语言服务器索引格式(LSIF)的规范。
             </p>
         </div>
         <div class="col-lg-4">
             <h1 class="text-center"><i class="fas fa-code-branch" aria-hidden="true"></i></h1>
             {% assign sorted = site.implementors | sort: 'index' %}
-            <a href = "{{ sorted.first.url | prepend: site.baseurl }}"><h3 class="text-center">Implementations</h3></a>
+            <a href = "{{ sorted.first.url | prepend: site.baseurl }}"><h3 class="text-center">实现</h3></a>
             <p>
-                The LSP has been implemented for many languages and many development tools are integrating these language servers.
+                LSP已经针对多种语言实现，许多开发工具正在集成这些语言服务器。
             </p>
         </div>
     </div>
